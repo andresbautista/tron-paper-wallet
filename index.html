@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="js/qrcode.js"></script>
+  <link rel="stylesheet" href="css/stile.css"/>
+  <script src="js/sistema.js"></script>
+</head>
+<body>
+  <!-- Form per insermento dati wallet per poi creare i codic QR e Wallet paper-->
+  <br><center><form class="boxDatiWallet" style="width:500px;">
+      <div class="col-3">
+          <label>Public address</address></label>
+          <input id="IndirizzoPubblico" type="text" placeholder="ex: TKaHsSXvCcVSxA1LzrtFFobgT32dmtph9x" value="" />
+      </div>
+      <div class="col-3">
+          <label>Private key</label>
+          <input id="ChiavePrivata" type="text" placeholder="ex: 035CA3B72F4B68E4D4536C8D9CE3CC0FEE0A574649444A16060FEF757B479825" value=""/>
+      </div>
+      Hide private key<input type="checkbox" id="checkboxNascondiChiavePrivata"/>
+      <hr>
+      <div class="col-3">
+          <a href="javascript:generate();"><button   type="button" >Generete Wallet Paper QR</button ></a>
+          <button type="button" onClick="window.print()">Print</button>
+      </div>                        
+  </form></center>
+    <!-- -->
+  <div class="wallet" id="wallet">
+    <img src="./images/wallet_paper.png"/>
+    <div class="amount-added-text">AMOUNT ADDED</div>
+    <div class="date-text">Date</div>
+    <div class="note-text">Note</div>
+    <div class="instruction-text">
+      <ul>
+        <li>
+            ° Use only the <b>public</b> address to deposit and be sent the trx
+        </li>
+        <li>
+          ° <b>DO NOT REVEAL THE PRIVATE KEY</b>, this key is private and does not send it to anyone..
+        </li>
+      </ul>
+    </div>
+    <div  id="ChiavePrivata_testo" class="secret-text"></div>
+    <div id="IndirizzoPubblico_testo" class="address-text"></div>
+    <div id="ChiavePrivata_qr" class="qr-secret"></div>
+    <div id="IndirizzoPubblico_qr" class="qr-address"></div>
+  </div>
+ 
+</body>
+</html>
