@@ -1,3 +1,4 @@
+/* Sistema JS per generare trx paper wallet v1 */
 function generate(){
   var pubkey = document.getElementById("IndirizzoPubblico").value;
   var privkey = document.getElementById("ChiavePrivata").value;
