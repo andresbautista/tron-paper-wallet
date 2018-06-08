@@ -1,6 +1,6 @@
 # Tron paper wallet v1
 Tron (TRX) paper wallet simple v1.
-This is a simple paper wallet that generates a card with qr codes.<br>
+This is a simple script that generates a trx paper wallet<br>
 Run the project on Github: https://maxgonzalees.github.io/tron-paper-wallet/
 <br>
 Email: maxgonzalees@gmail.com
